@@ -62,3 +62,13 @@ resource "aws_route53_record" "CNAME-tropical-ruby-com-br" {
   ttl     = 300
   records = ["wagner.github.io"] # Repositório com redirecionamento manual
 }
+
+# Arquitetura e Design de Aplicações Ruby (ada.ruby.com.br)
+# ada.ruby.com.br -> https://adarb.org
+resource "aws_route53_record" "CNAME-ada-ruby-com-br" {
+  zone_id = aws_route53_zone.ruby-com-br.id
+  name    = "ada.ruby.com.br"
+  type    = "CNAME"
+  ttl     = 300
+  records = ["adarb.org"]
+}
