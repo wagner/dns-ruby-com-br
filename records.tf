@@ -63,6 +63,15 @@ resource "aws_route53_record" "CNAME-tropical-ruby-com-br" {
   records = ["wagner.github.io"] # Repositório com redirecionamento manual
 }
 
+# Arquitetura e Design de Aplicações Ruby (ada.ruby.com.br)
+# ada.ruby.com.br -> https://adarb.org
+resource "aws_route53_record" "CNAME-ada-ruby-com-br" {
+  zone_id = aws_route53_zone.ruby-com-br.id
+  name    = "ada.ruby.com.br"
+  type    = "CNAME"
+  ttl     = 300
+  records = ["adarb.org"]
+
 # Frevo on Rails (frevo.ruby.com.br)
 # frevo.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
 resource "aws_route53_record" "CNAME-frevo-ruby-com-br" {
