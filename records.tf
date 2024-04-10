@@ -3,16 +3,13 @@ resource "aws_route53_zone" "ruby-com-br" {
   name          = "ruby.com.br"
 }
 
-# Registros TXT
-resource "aws_route53_record" "TXT-ruby-com-br" {
+resource "aws_route53_record" "record" {
+  for_each = local.records
   zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "ruby.com.br"
-  type    = "TXT"
+  name    = each.key
+  type    = each.value.type
   ttl     = 300
-
-  records = [
-    "v=spf1 -all" # Política para bloquear emails ruby.com.br enquanto não estamos usando
-  ]
+  records = [each.value.value]
 }
 
 # ruby.com.br -> https://github.com/rubysummitbrasil/rubysummitbrasil.github.io
@@ -33,62 +30,14 @@ resource "aws_route53_record" "A-ruby-com-br" {
   ]
 }
 
-# Diretório de comunidades Ruby
-# community.ruby.com.br -> https://github.com/guru-br/guru-br.github.io
-resource "aws_route53_record" "CNAME-community-ruby-com-br" {
+# Registros TXT
+resource "aws_route53_record" "TXT-ruby-com-br" {
   zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "community.ruby.com.br"
-  type    = "CNAME"
+  name    = "ruby.com.br"
+  type    = "TXT"
   ttl     = 300
-  records = ["guru-br.github.io"]
-}
 
-# Diretório de empresas Ruby criado pela Le Wagon e Tropical.rb
-# empresas.ruby.com.br -> vast-guineafowl-iu7hx8tx58o0h63miig7mtb0.herokudns.com
-resource "aws_route53_record" "CNAME-empresas-ruby-com-br" {
-  zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "empresas.ruby.com.br"
-  type    = "CNAME"
-  ttl     = 300
-  records = ["vast-guineafowl-iu7hx8tx58o0h63miig7mtb0.herokudns.com"]
-}
-
-# Redirecionamento tropical.ruby.com.br
-# tropical.ruby.com.br -> www.tropicalrb.com (via https://github.com/wagner/tropical-ruby-com-br)
-resource "aws_route53_record" "CNAME-tropical-ruby-com-br" {
-  zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "tropical.ruby.com.br"
-  type    = "CNAME"
-  ttl     = 300
-  records = ["wagner.github.io"] # Repositório com redirecionamento manual
-}
-
-# Arquitetura e Design de Aplicações Ruby (ada.ruby.com.br)
-# ada.ruby.com.br -> https://adarb.org
-resource "aws_route53_record" "CNAME-ada-ruby-com-br" {
-  zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "ada.ruby.com.br"
-  type    = "CNAME"
-  ttl     = 300
-  records = ["adarb.org"]
-}
-
-# Frevo on Rails (frevo.ruby.com.br)
-# frevo.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
-resource "aws_route53_record" "CNAME-frevo-ruby-com-br" {
-  zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "frevo.ruby.com.br"
-  type    = "CNAME"
-  ttl     = 300
-  records = ["frevo-on-rails.github.io"]
-}
-
-# Frevo on Rails (pe.ruby.com.br)
-# pe.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
-resource "aws_route53_record" "CNAME-pe-ruby-com-br" {
-  zone_id = aws_route53_zone.ruby-com-br.id
-  name    = "pe.ruby.com.br"
-  type    = "CNAME"
-  ttl     = 300
-  records = ["frevo-on-rails.github.io"]
+  records = [
+    "v=spf1 -all" # Política para bloquear emails ruby.com.br enquanto não estamos usando
+  ]
 }
