@@ -52,19 +52,19 @@ locals {
     }
 
     # Frevo on Rails (frevo.ruby.com.br)
-    # frevo.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
+    # frevo.ruby.com.br -> frevoonrails.com.br
     frevo = {
       type  = "CNAME"
       name  = "frevo.ruby.com.br"
-      value = "frevo-on-rails.github.io"
+      value = "frevoonrails.com.br"
     }
 
     # Frevo on Rails (pe.ruby.com.br)
-    # pe.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
+    # pe.ruby.com.br -> frevoonrails.com.br
     pe = {
       type  = "CNAME"
       name  = "pe.ruby.com.br"
-      value = "frevo-on-rails.github.io"
+      value = "frevoonrails.com.br"
     }
   }
 }
