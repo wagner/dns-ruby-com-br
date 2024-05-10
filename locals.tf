@@ -54,9 +54,9 @@ locals {
     # Frevo on Rails (frevo.ruby.com.br)
     # frevo.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
     frevo = {
-      type  = "CNAME"
-      name  = "frevo.ruby.com.br"
-      value = "frevo-on-rails.github.io"
+      type  = "TXT"
+      name  = "_github-pages-challenge-embs.frevo.ruby.com.br"
+      value = "a5e75b0c0b048f320add8945e88165"
     }
 
     # Frevo on Rails (pe.ruby.com.br)
