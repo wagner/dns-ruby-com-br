@@ -54,9 +54,9 @@ locals {
     # Frevo on Rails (frevo.ruby.com.br)
     # frevo.ruby.com.br -> https://github.com/frevo-on-rails/frevo-on-rails.github.com
     frevo = {
-      type  = "TXT"
-      name  = "_github-pages-challenge-embs.frevo.ruby.com.br"
-      value = "a5e75b0c0b048f320add8945e88165"
+      type  = "CNAME"
+      name  = "frevo.ruby.com.br"
+      value = "frevo-on-rails.github.io"
     }
 
     # Frevo on Rails (pe.ruby.com.br)
@@ -65,6 +65,22 @@ locals {
       type  = "CNAME"
       name  = "pe.ruby.com.br"
       value = "frevo-on-rails.github.io"
+    }
+
+    # Grupo de Usuários de Ruby de Goiás (go.ruby.com.br)
+    # go.ruby.com.br -> https://github.com/Guru-goias/guru-goias.github.io
+    go = {
+      type  = "CNAME"
+      name  = "go.ruby.com.br"
+      value = "guru-goias.github.io"
+    }
+
+    # Ruby Goiás (goias.ruby.com.br)
+    # goias.ruby.com.br -> https://github.com/Guru-goias/guru-goias.github.io
+    goias = {
+      type  = "CNAME"
+      name  = "goias.ruby.com.br"
+      value = "guru-goias.github.io"
     }
   }
 }
