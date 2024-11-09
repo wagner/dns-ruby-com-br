@@ -70,19 +70,19 @@ locals {
     }
 
     # Grupo de Usuários de Ruby de Goiás (go.ruby.com.br)
-    # go.ruby.com.br -> https://github.com/Guru-goias
+    # go.ruby.com.br -> https://github.com/RubyGoias
     go = {
       type  = "CNAME"
       name  = "go.ruby.com.br"
-      value = "guru-goias.github.io"
+      value = "rubygoias.github.io"
     }
 
     # Goiás on Rails (goias.ruby.com.br)
-    # goias.ruby.com.br -> https://github.com/Guru-goias
+    # goias.ruby.com.br -> https://github.com/RubyGoias
     goias = {
       type  = "CNAME"
       name  = "goias.ruby.com.br"
-      value = "guru-goias.github.io"
+      value = "rubygoias.github.io"
     }
   }
 }
