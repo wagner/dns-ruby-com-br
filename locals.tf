@@ -30,9 +30,11 @@ locals {
     # Diretório de empresas Ruby criado pela Le Wagon e Tropical.rb
     # empresas.ruby.com.br -> vast-guineafowl-iu7hx8tx58o0h63miig7mtb0.herokudns.com
     empresas = {
-      type  = "CNAME"
+      type  = "A"
       name  = "empresas.ruby.com.br"
-      value = "vast-guineafowl-iu7hx8tx58o0h63miig7mtb0.herokudns.com"
+      value = [
+        "66.241.125.4"
+      ]
     }
 
     # Redirecionamento tropical.ruby.com.br
