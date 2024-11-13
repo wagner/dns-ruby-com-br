@@ -76,5 +76,13 @@ locals {
       name  = "go.ruby.com.br"
       value = "rubygoias.github.io"
     }
+
+    # Grupo de Usuários de Ruby do Distrito Federal (df.ruby.com.br)
+    # df.ruby.com.br -> https://github.com/RubyGoias
+    df = {
+      type  = "CNAME"
+      name  = "df.ruby.com.br"
+      value = "rubydf.com"
+    }
   }
 }
