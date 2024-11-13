@@ -76,13 +76,5 @@ locals {
       name  = "go.ruby.com.br"
       value = "rubygoias.github.io"
     }
-
-    # Goiás on Rails (goias.ruby.com.br)
-    # goias.ruby.com.br -> https://github.com/RubyGoias
-    goias = {
-      type  = "CNAME"
-      name  = "goias.ruby.com.br"
-      value = "rubygoias.github.io"
-    }
   }
 }
