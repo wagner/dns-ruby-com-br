@@ -78,7 +78,7 @@ locals {
     }
 
     # Grupo de Usuários de Ruby do Distrito Federal (df.ruby.com.br)
-    # df.ruby.com.br -> https://github.com/RubyGoias
+    # df.ruby.com.br -> https://github.com/Ruby-df
     df = {
       type  = "CNAME"
       name  = "df.ruby.com.br"
