@@ -74,7 +74,7 @@ locals {
     go = {
       type  = "CNAME"
       name  = "go.ruby.com.br"
-      value = "rubygoias.github.io"
+      value = "hashnode.network"
     }
 
     # Grupo de Usuários de Ruby do Distrito Federal (df.ruby.com.br)
