@@ -70,11 +70,19 @@ locals {
     }
 
     # Grupo de Usuários de Ruby de Goiás (go.ruby.com.br)
-    # go.ruby.com.br -> https://github.com/RubyGoias
+    # go.ruby.com.br -> hashnode.network
     go = {
       type  = "CNAME"
       name  = "go.ruby.com.br"
       value = "hashnode.network"
+    }
+
+    # Grupo de Usuários de Ruby de Goiás (goias.ruby.com.br)
+    # goias.ruby.com.br -> https://github.com/rubygoias/goias-ruby-com-br
+    goias = {
+      type  = "CNAME"
+      name  = "goias.ruby.com.br"
+      value = "rubygoias.github.io"
     }
 
     # Grupo de Usuários de Ruby do Distrito Federal (df.ruby.com.br)
