@@ -68,5 +68,21 @@ locals {
       name  = "pe.ruby.com.br"
       value = "frevo-on-rails.github.io"
     }
+
+    # Grupo de Usuários de Ruby de Goiás (go.ruby.com.br)
+    # go.ruby.com.br -> https://github.com/RubyGoias
+    go = {
+      type  = "CNAME"
+      name  = "go.ruby.com.br"
+      value = "rubygoias.github.io"
+    }
+
+    # Grupo de Usuários de Ruby do Distrito Federal (df.ruby.com.br)
+    # df.ruby.com.br -> https://github.com/Ruby-df
+    df = {
+      type  = "CNAME"
+      name  = "df.ruby.com.br"
+      value = "rubydf.com"
+    }
   }
 }
